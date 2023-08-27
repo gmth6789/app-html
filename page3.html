@@ -5,17 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>分类</title>
-		<link rel="stylesheet" href="common/vant.min.css" />
-		<script src="common/vue.js"></script>
-		<script src="common/vant.min.js"></script>
-		<script src="common/axios.min.js"></script>
-		<script src="common/Session.js"></script>
-		<script src="common/Tools.js"></script>
-		<script src="common/Validate.js"></script>
-		<script src="common/Page.js"></script>
-		<script src="common/Http.js"></script>
-		<script src="common/index.umd.js"></script>
-		<link rel="stylesheet" href="common/diygw-ui/index.css" />
+		<link rel="stylesheet" href="/assets/css/vant.min.css" />
+		<link rel="stylesheet" href="/assets/css/index.css" />
 	</head>
 	<body>
 		<div id="app">
@@ -177,70 +168,7 @@
 		</div>
 	</body>
 	<script type="module">
-		const app = Vue.createApp({
-			data() {
-				return {
-					search: '',
-					rateCount: 5,
-					rate: 5,
-					rate1Count: 5,
-					rate1: 5,
-					rate5Count: 5,
-					rate5: 5
-				};
-			},
-			created() {
-				this.init();
-			},
-			methods: {
-				async init() {},
-				scrolltoupperFlex(evt) {},
-				scrolltolowerFlex(evt) {},
-				scrolltoupperFlex1(evt) {},
-				scrolltolowerFlex1(evt) {},
-				scrolltoupperFlex3(evt) {},
-				scrolltolowerFlex3(evt) {},
-				scrolltoupperFlex5(evt) {},
-				scrolltolowerFlex5(evt) {},
-				changeRate(evt) {
-					let rate = evt.currentTarget.dataset.index;
-					if (this.rate == rate) {
-						rate = rate - 1;
-					}
-					this.rate = rate;
-				},
-				changeRate1(evt) {
-					let rate1 = evt.currentTarget.dataset.index;
-					if (this.rate1 == rate1) {
-						rate1 = rate1 - 1;
-					}
-					this.rate1 = rate1;
-				},
-				changeRate5(evt) {
-					let rate5 = evt.currentTarget.dataset.index;
-					if (this.rate5 == rate5) {
-						rate5 = rate5 - 1;
-					}
-					this.rate5 = rate5;
-				}
-			}
-		});
-		app.use(vant);
-		app.use(DiygwLib);
-		app.config.globalProperties.$tools = new Tools();
-		app.config.globalProperties.$http = httpService;
-		app.config.globalProperties.$session = Session;
-		app.mixin({
-			methods: {
-				Validate,
-				setData,
-				navigateTo,
-				showModal,
-				showToast,
-				uploadImage
-			}
-		});
-		app.mount('#app');
+		
 	</script>
 	<style>
 		.search-clz {
